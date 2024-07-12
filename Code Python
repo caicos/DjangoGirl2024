@@ -1,0 +1,47 @@
+CD C:\Users\brulet_m\Desktop\Perso\MarcoPyDjangogirls
+
+
+Créer un environnement virtuel de programmation (ou virtualenv).
+  py -m venv myvenv
+
+Démarrez votre environnement virtuel en exécutant :
+  ...> myvenv\Scripts\activate
+
+Installer Django dans l'env. virtuel:
+  vérifier qu'on a la dernière version de pip
+  python -m pip install --upgrade pip
+
+  Créer un fichier requirements.txt à la racine
+  Lancer pip:
+  pip install -r requirements.txt
+  python -m pip install -r requirements.txt
+
+Pour créer un nouveau projet Django:
+django-admin startproject mysite .
+
+Méthode pour générer des clés secretes:
+  py -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
+
+  from django.core.management.utils import get_random_secret_key
+  print(get_random_secret_key())
+
+  python -c "import secrets; print(secrets.token_urlsafe())"
+
+Pour créer la base de donnée
+  python manage.py migrate
+
+
+Lancer le serveur web:
+  python manage.py runserver
+
+   Ouvrez votre navigateur (Firefox, Chrome,..):
+   http://127.0.0.1:8000/
+
+   Pour arrêter votre serveur web, retournez dans la fenêtre où il tourne et appuyez sur CTRL+C
+
+Pour créer une application (à l'intérieur de notre projet)
+   python manage.py startapp blog
+
+
+Le nom d'une classe commence toujours par une majuscule.
+La règle de nommage pour une méthode est d'utiliser des minuscules et des tirets bas à la place des espaces.
